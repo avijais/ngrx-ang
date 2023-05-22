@@ -33,6 +33,7 @@ export class AppComponent implements OnInit {
   addNewExpenses(): void {
     this.store.dispatch(addExpenses(this.newExpense));
 
+    /**Code without state */
     // this.dataService.addExpenses(this.newExpense).subscribe((res) => {
     //   this.getAllExpenses();
     //   this.newExpense = new Expense();
