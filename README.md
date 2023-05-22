@@ -41,4 +41,10 @@ This command will add `"@ngrx/store":"^11.1.1"` line in the file `package.json`
 2. Create directory `app/Store/Actions`
 3. Create file `expense.action.ts`
 4. Will create 3 action
-5. All action will have 2 property, 1 is Type(means identification of action) and another is property(so what action brings like payload) 
+5. All action will have 2 property, 1 is Type(means identification of action) and another is property(so what action brings like payload)
+
+
+## Add devtools in chrome to debug
+Needed to do 2 steps
+1. First run the comman `ng add @ngrx/store-devtools`
+2. Install `Redux DevTools` extension in chrome browser

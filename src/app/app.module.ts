@@ -10,6 +10,10 @@ import { MaterialModules } from './app.material.module';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryService } from './Service/in-memory.service';
 import { FormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
+import { expenseReducer } from './Store/Reducers/expense.reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, ExpenseListComponent ],
@@ -20,7 +24,9 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MaterialModules,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryService)
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryService),
+    StoreModule.forRoot({ expenses: expenseReducer }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -27,17 +27,17 @@ export class AppComponent implements OnInit {
   getAllExpenses(): void {
     this.store.dispatch(getExpenses());
 
-    this.dataService.getExpenses().subscribe((movies: Expense[]) => {
-      this.expenses = movies;
-    });
+    // this.dataService.getExpenses().subscribe((movies: Expense[]) => {
+    //   this.expenses = movies;
+    // });
   }
 
   addNewExpenses(): void {
     this.store.dispatch(addExpenses({ expense: this.newExpense}));
-    
-    this.dataService.addExpenses(this.newExpense).subscribe((res) => {
-      this.getAllExpenses();
-      this.newExpense = new Expense();
-    });
+
+    // this.dataService.addExpenses(this.newExpense).subscribe((res) => {
+    //   this.getAllExpenses();
+    //   this.newExpense = new Expense();
+    // });
   }
 }

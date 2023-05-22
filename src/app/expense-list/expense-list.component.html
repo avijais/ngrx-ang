@@ -1,5 +1,5 @@
 <div class="expenses">
-    <section *ngFor="let expense of expenses">
+    <section *ngFor="let expense of expenses$ | async">
         <mat-card>
             <h1> {{expense.name}} </h1>
             <h2> {{ expense.releaseDate | date }} </h2>
