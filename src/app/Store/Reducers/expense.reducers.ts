@@ -10,8 +10,8 @@ const initialState: ReadonlyArray<Expense> = [];
 
 export const expenseReducer = createReducer(
     initialState,
-    on(getExpenses, (state: any) => [...mockExpenses()]),
-    on(addExpenses, (state: any, expense: any) => [...state, expense])
+    on(getExpenses, () => [...mockExpenses()]),
+    on(addExpenses, (state, expense) => [...state, expense])
 )
 
 function mockExpenses(): Expense[] {
