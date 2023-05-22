@@ -1,0 +1,10 @@
+<div class="expenses">
+    <section *ngFor="let expense of expenses">
+        <mat-card>
+            <h1> {{expense.name}} </h1>
+            <h2> {{ expense.releaseDate | date }} </h2>
+            <h3> ${{ expense.earning }} million </h3>
+        </mat-card>
+    </section>
+</div>
+

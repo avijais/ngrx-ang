@@ -1,0 +1,28 @@
+<div style="padding: 20px;">
+  <div style="padding: 20px;">
+    <h2>Create Expense</h2>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Expense name</mat-label>
+        <input name='name' [(ngModel)]="newExpense.name" matInput>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Total earning</mat-label>
+        <input name='earning' [(ngModel)]="newExpense.earning" type='number' matInput placeholder="In million">
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Release date</mat-label>
+        <input name='releaseDate' [(ngModel)]="newExpense.releaseDate" matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button (click)="addNewExpenses()" style="margin-left: 33%;" mat-raised-button color="primary">Add Expense</button>
+    </form>
+  </div>
+  <mat-divider></mat-divider>
+  <div style="padding: 20px;">
+    <app-expense-list [expenses]='expenses' ></app-expense-list>
+  </div>
+</div>
