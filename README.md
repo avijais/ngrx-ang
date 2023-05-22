@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## To use action in ngRx, Install ngRx store first, command to install ngRx store above Ang CLI 6
+Run command `ng add @ngrx/store@latest --minimal false`
+--minimal false will add some files and folders, it should create reducer folder with reducers and metaReducers, but if you are going to use only action then not need it.
+This command will add `"@ngrx/store":"^11.1.1"` line in the file `package.json`
