@@ -28,6 +28,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## To use action in ngRx, Install ngRx store first, command to install ngRx store above Ang CLI 6
+
 Run command `ng add @ngrx/store@latest --minimal false`
 --minimal false will add some files and folders, it should create reducer folder with reducers and metaReducers, but if you are going to use only action then not need it.
 This command will add `"@ngrx/store":"^11.1.1"` line in the file `package.json`
+
+
+
+## Create action
+
+1. Create directory `app/Store`
+2. Create directory `app/Store/Actions`
+3. Create file `expense.action.ts`
+4. Will create 3 action
+5. All action will have 2 property, 1 is Type(means identification of action) and another is property(so what action brings like payload) 
